@@ -1,6 +1,6 @@
 <?php
 
-public abstract class MinCost {
+abstract class MinCost {
 	private $startingTemperature;
 	private $coolingRate;
 
@@ -12,12 +12,12 @@ public abstract class MinCost {
 	// Use simulated annealing to hopefully get a list with a really good cost, if not the best cost overall
 	public function findBestCost() {
 		// Create initial list with a random order of items
-		$currentList = getRandomList(getUnsortedList());
+		$currentList = $this->getRandomList($this->getListToSort());
 		$bestList = $currentList;
 
 		// Calculate cost of the list. Putting this here will enable a certain amount of caching to reduce the
 		// amount of overall computational steps
-		$currentCost = getCost($currentList);
+		$currentCost = $this->getCost($currentList);
 		$workingCost = $currentCost;
 		$bestCost = $currentCost;
 
@@ -26,14 +26,14 @@ public abstract class MinCost {
 		// If the temperature of the system is 1, then it's cool enough
 		while ($temperature > 1) {
 			// Mutate the last list, store it in a new variable, and calculate its cost
-			$workingList = mutateList($currentList);
-			$workingCost = getCost($workingList);
+			$workingList = $this->mutateList($currentList);
+			$workingCost = $this->getCost($workingList);
 
 			// Calculate the acceptance probability, and accept the new solution if the probability checks
 			// out. This is the main improvement of simulated annealing over a hill climbing algorithm
 			// since it enables jumping out of local optimums by sometimes choosing a worse solution over
 			// the current one.
-			if (getAcceptanceProbability($currentCost, $workingCost, $temperature) > (mt_rand() / mt_getrandmax())) {
+			if ($this->getAcceptanceProbability($currentCost, $workingCost, $temperature) > (mt_rand() / mt_getrandmax())) {
 				$currentList = $workingList;
 				$currentCost = $workingCost;
 			}
@@ -99,7 +99,7 @@ public abstract class MinCost {
 
 	// This function will return the base list to sort by cost. As long as the list is an array,
 	// we don't care what's inside of it.
-	abstract public function getUnsortedList();
+	abstract public function getListToSort();
 
 	// This function will get the cost of a list passed to it.
 	abstract public function getCost($list);
