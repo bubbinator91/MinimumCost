@@ -129,7 +129,7 @@ $jsonFile = fopen("location_data.json", "w+");
 fwrite($jsonFile, json_encode($jsonArray));
 fclose($jsonFile);
 
-echo "Outputing the IDs in the order of the best route to a file...\n";
+echo "Outputting the IDs in the order of the best route to a file...\n";
 $routeFile = fopen("route.txt", "w+");
 foreach ($goodRoute as $location) {
 	fwrite($routeFile, $location["id"] . PHP_EOL);
