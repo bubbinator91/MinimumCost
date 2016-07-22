@@ -1,6 +1,6 @@
 <?php
 
-include_once "../MinCost/MinCost.php";
+include_once "../MinCost.php";
 
 class TSP extends MinCost {
 	private $locations = NULL;
