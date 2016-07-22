@@ -16,7 +16,7 @@ If you just want to extend the MinCost class for yourself, the general idea is a
 ```PHP
 <?php
 
-include_once "MinCost.php"
+include_once "MinCost.php";
 
 class Example extends MinCost {
 	private $list = NULL;
