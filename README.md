@@ -33,11 +33,11 @@ class Example extends MinCost {
 		...
 	}
 
-	public function getListToSort() {
+	protected function getListToSort() {
 		return $this->list;
 	}
 
-	public function getCost($list) {
+	protected function getCost($list) {
 		// Whatever code you need to determine to overall "cost" of $list should go here
 	}
 

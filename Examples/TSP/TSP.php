@@ -47,12 +47,12 @@ class TSP extends MinCost {
 	}
 
 	// Overridden abstract function. Just returns the base list of locations
-	public function getListToSort() {
+	protected function getListToSort() {
 		return $this->locations;
 	}
 
 	// Iterates through the given list and returns the cost of it. In this case, the cost is the total distance of the route.
-	public function getCost($list) {
+	protected function getCost($list) {
 		if (is_null($list) || !is_array($list)) {
 			return -1;
 		}

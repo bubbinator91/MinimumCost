@@ -99,10 +99,10 @@ abstract class MinCost {
 
 	// This function will return the base list to sort by cost. As long as the list is an array,
 	// we don't care what's inside of it.
-	abstract public function getListToSort();
+	abstract protected function getListToSort();
 
 	// This function will get the cost of a list passed to it.
-	abstract public function getCost($list);
+	abstract protected function getCost($list);
 }
 
 ?>
