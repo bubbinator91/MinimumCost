@@ -6,3 +6,6 @@ This script has been tested to be functional on PHP v5.6.23. If you run this scr
 
 ### TSPViewer.py
 This script has been tested to be function on Python v2.7. While it is run from the command line/terminal, it won't work properly if you don't have some sort of graphical shell running. If you run this script, it will first check to see if the output files from the PHP script are present. If not, it will run the PHP script to generate the files. Then, it will read the files, and show a window containing a visual representation of the best route.
+
+Here is a sample plot that was generated:
+![TSP Sample Plot](https://github.com/bubbinator91/MinimumCost/raw/master/images/tsp_sample_plot.png "TSP Sample Plot")
