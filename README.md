@@ -8,9 +8,9 @@ If you just want to extend the MinCost class for yourself, the general idea is a
 
 1. Place the MinCost.php file wherever it should belong in your project.
 2. In the file where you are going to implement your extension class, make sure to include the MinCost.php file so your code can see it.
-3. Make sure to implement the two abstract functions. Their purpose is as follows
-..* getListToSort(): This should just return the base list that needs to be sorted so that the data in your list is abstracted away.
-..* getCost(): This should get the total cost of a list. How you determine the cost of a list is completely up to you, since the input list is your data.
+3. Make sure to implement the two abstract functions. Their purpose is as follows:
+  * getListToSort(): This should just return the base list that needs to be sorted so that the data in your list is abstracted away.
+  * getCost(): This should get the total cost of a list. How you determine the cost of a list is completely up to you, since the input list is your data.
 
 #### Usage Example
 ```PHP
