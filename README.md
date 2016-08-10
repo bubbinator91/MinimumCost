@@ -2,7 +2,7 @@
 This is an implementation of the heuristic simulated annealing algorithm in PHP. It is written in such a way that it technically can sort any array, as long as you can define some sort "cost" between any two items in the array.
 
 ## Purpose
-This small project originally began as a direct implementation of simulated annealing to solve the Traveling Salesman problem in PHP for [Meal Prep SLO](https://mealprepslo.com) (launches soon). As the project progressed, I wanted to put a more general version of the simulated annealing implementation online, open source, so other people could use it. I abstracted the core of the TSP solver out into what is now the MinCost abstract class, and implemented the TSP solver as an example. The reason the TSP script generates data as it does is to mimic how data is represented Meal Prep SLO's internal code.
+This small project originally began as a direct implementation of simulated annealing to solve the Traveling Salesman problem in PHP for [Meal Prep SLO](https://mealprepslo.com). As the project progressed, I wanted to put a more general version of the simulated annealing implementation online, open source, so other people could use it. I abstracted the core of the TSP solver out into what is now the MinCost abstract class, and implemented the TSP solver as an example. The reason the TSP script generates data as it does is to mimic how data is represented Meal Prep SLO's internal code.
 
 ## Usage
 If you want to run the [examples](/examples), clone the whole repo and check them out for yourself.

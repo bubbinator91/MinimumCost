@@ -80,7 +80,7 @@ abstract class MinCost {
 		if ($i > $k) {
 			$t = $i;
 			$i = $k;
-			$k = $i;
+			$k = $t;
 		}
 
 		while ($i < $k) {
